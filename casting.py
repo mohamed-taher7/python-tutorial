@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 # Python Casting
 #
 # Specify a Variable Type
