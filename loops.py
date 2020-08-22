@@ -1,5 +1,8 @@
-#!/usr/bin/env python
-
+# Python has two primitive loop commands:
+#
+# while loops
+# for loops
+#---------------
 # Python For Loops
 #
 # A for loop is used for iterating over a sequence (that is either a list, a tuple, a dctionary, a set, or a string).
@@ -88,3 +91,28 @@ def tri_recursion(k):
 
 print("\n\nRecursion Example Results")
 tri_recursion(6)
+#---------------
+i = 1
+while i < 6:
+    print(i)
+    i += 1
+
+# The break Statement
+#
+# With the break statement we can stop the loop even if the wile condition is true:
+i = 1
+while i < 6:
+    print(i)
+    if i == 3:
+        break
+    i += 1
+
+# The continue Statement
+#
+# With the continue statement we can stop the current iteration, and continue with the next:
+i = 0
+while i < 6:
+    i += 1
+    if i == 3:
+        continue
+    print(i)
