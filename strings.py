@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-
-# Python Strings
 
 # String Literals
 #
@@ -53,3 +50,20 @@ print( a.split(",") ) # returns ['Hello', ' World!']
 #x = input()
 x = raw_input("Enter your name: ")
 print("Hello, " + x)
+#------------------
+#Negative Indexing
+#Use negative indexes to start the slice from the end of the string:
+#Example
+#Get the characters from position 5 to position 1 (not included), starting the count from the end of the string:
+b = "Hello, World!"
+print(b[-5:-2])
+#Check String
+txt = "The rain in Spain stays mainly in the plain"
+x = "ain" not in txt
+print(x)  
+#String Concatenation
+a = "Hello"
+b = "World"
+c = a + b
+print(c)
+#TODO: continue this
