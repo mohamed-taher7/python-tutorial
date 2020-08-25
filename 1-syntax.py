@@ -6,8 +6,11 @@ print("Hello, World!")
 """ This is a
 multiline docstring."""
 
-# 3. Indentations
+# 3. Indentations is a must in python
 if 5 > 2:
-    print("Five is greater than two!")
-
-# 4. variables
+    print("Five is greater than two!") 
+if 5 > 2:
+print("Five is greater than two!") #doesn't work
+if 5 > 2:
+        print("Five is greater than two!") 
+    print("six is greater than two!")#doesn't work
