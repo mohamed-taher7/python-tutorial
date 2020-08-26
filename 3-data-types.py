@@ -1,7 +1,7 @@
 """
 Data-types with some details
 """
-#______________________Strings___________________________#
+#_____________________________________________Strings_____________________________________________#
 # Text Type: 	str
 m = "Hello World"
 
@@ -103,7 +103,7 @@ print("We are the so-called \"Vikings\" from the north.") #output: We are the so
 #convert from int/float/comlex to string:
 a = str(x)
 
-#______________________Numbers____________________________#
+#_____________________________________________Numbers_____________________________________________#
 # Numeric Types: 	int, float, complex
 x, y, z = 1, 35656222554887711, -3255522      # int:  whole number, positive or negative, without decimals, of unlimited length.
 a, b, c = 2.8, -35.59, -87.7e100 # float: positive or negative, containing one or more decimals.
@@ -262,7 +262,41 @@ print(list1) #append list1 to the end of list 2
 # sort()            Sorts the list according to it's data-type
 
 #______________________________________________#
-y = ("apple", "banana", "cherry")   #tuple:  ordered and unchangeable. Allows duplicate members.
+ #tuple:  ordered and unchangeable. Allows duplicate members.
+ y = ("apple", "banana", "cherry")  #assign
+#stuff same as lists:
+  #Access Tuple Items
+  #Negative Indexing
+  #Range of Indexes
+  #Loop Through a Tuple
+  #Check if Item Exists
+  #Tuple Length
+#create tuple with one item:
+#One item tuple, remember the commma:
+thistuple = ("apple",)
+print(type(thistuple))
+#NOT a tuple
+thistuple = ("apple")
+print(type(thistuple)) 
+
+
+#Change Tuple Values
+#you can't!, but convert to list then convert back to tuple:
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+ 
+#tuple method:
+thistuple = tuple(("apple", "banana", "cherry"))
+#Return the number of times the value 5 appears in the tuple:
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+print(thistuple.count(5)) 
+
+#Search for the first occurrence of the value 8, and return its position:
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+print(thistuple.index(8)) 
+ 
 #______________________________________________#
 x = range(6)                        #range(start, stop, step) 
 #______________________________________________#
@@ -270,11 +304,28 @@ x = range(6)                        #range(start, stop, step)
 a = {"name" : "John", "age" : 36}    #dict: unordered, changeable and indexed. No duplicate members.
 #______________________________________________#
 # Set Types: 	set, frozenset
-z = {"apple", "banana", "cherry"}   #set: unordered and unindexed. No duplicate members.
+#set: unordered and unindexed. No duplicate members.
+z = {"apple", "banana", "cherry"} 
+
+#Check if "banana" is present in the set:
+thisset = {"apple", "banana", "cherry"}
+print("banana" in thisset) 
+
+#you cannot change its items, but you can add new items.
+ #same as lists:
+  #Get the Length of a Set
+  #The clear() method 
+  #HEREE
+  
+#To remove an item in a set, use the remove(), or the discard() method.
+thisset.remove("banana")
+#Note: If the item to remove does not exist, discard() will NOT raise an error.
+#pop() will not tell you what item that gets removed.(i.e random deleting)
+
 b = frozenset({"apple", "banana", "cherry"}) #immutable version of a Python set
 #______________________________________________#
 
-#______________________Booleans____________________________#
+#_____________________________________________Booleans_____________________________________________#
 # Boolean Type: 	bool
 m = True
 l = False
@@ -314,7 +365,7 @@ print("banana" in x)
 # returns True because a sequence with the value "banana" is in the list
 
 
-#______________________Binary Types____________________________#
+#_____________________________________________Binary Types_____________________________________________#
 
 # Binary Types: 	bytes, bytearray, memoryview
 x = b"Hello"
