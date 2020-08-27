@@ -1,35 +1,21 @@
-#!/usr/bin/env python
-
-# Python Dictionaries
-#
-# Dictionary
-#
-# A dictionary is a collection which is unordered, changeable and indexed.
-# In Python dictionaries are written with curly brackets, and the have keys and values.
-
+#assign
 thisdict = {
+    "key" : "value"
     "brand": "Ford",
     "model": "Mustang",
     "year": 1964
 }
-
-print (thisdict)
+#or
+thisdict = dict(brand="Ford", model="Mustang", year=1964)
 
 # Accessing Items
-#
-# You can access the items of a dictionary by referring to its key name:
+#Get the value of the "model" key:
 
 x = thisdict["model"]
-x = thisdict.get("model")
+x = thisdict.get("model") #output: Mustang
 
 # Change Values
-#
-# You can change the value of a specific item by referring to its key name:
-thisdict = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-}
+
 thisdict["year"] = 2018
 
 # Loop Through a Dictionary
@@ -57,78 +43,31 @@ print( len(thisdict) )
 # Adding Items
 #
 # Adding an item to the dictionary is done by using a new index key and
-# assign a value to it:
-thisdict = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-}
 thisdict["color"] = "red"
 print(thisdict)
 
 # Removing Items
-#
-# There are several methods to remove items from a dictionary:
 
 # The del keyword removes the item with the specified key name:
-thisdict = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-}
 del thisdict["model"]
-print(thisdict)
+
 
 # The pop() method removes the item with the specified key name:
-thisdict = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-}
 thisdict.pop("model")
 print(thisdict)
 
 #The popitem() method removes the last inserted item (in versions before 3.7, a random item is removed instead):
-thisdict = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-}
 thisdict.popitem()
 print(thisdict)
 
 # The del keyword removes the item with the specified key name:
-thisdict = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-}
 del thisdict["model"]
-print(thisdict)
 
 # The del keyword can also delete the dictionary completely:
-thisdict = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-}
 del thisdict
-#print(thisdict) # this will cause an error because "thislist" no longer exists.
 
 # The clear() keyword empties the dictionary:
-thisdict = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-}
 thisdict.clear()
-print(thisdict)
-
-# The dict() Constructor
-#
-# It is also possible to use the dict() constructor to make a dictionary:
-thisdict = dict(brand="Ford", model="Mustang", year=1964)
-print(thisdict)
 
 
 # Dictionary Methods
