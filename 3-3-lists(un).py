@@ -97,6 +97,7 @@ print(list1)
 #method 3
 list1.extend(list2)
 print(list1) #append list1 to the end of list 2
+
 # List Methods
 
 # Method            Description
@@ -105,3 +106,4 @@ print(list1) #append list1 to the end of list 2
 # index()           Returns the index of the first element with the specified value
 # reverse()         Reverses the order of the list
 # sort()            Sorts the list according to it's data-type
+#https://www.w3schools.com/python/python_ref_list.asp
