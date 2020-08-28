@@ -1,69 +1,95 @@
+# Multiline Strings
 
-# String Literals
-#
-# String  literals in Python are surrounded by either single quotation marks, or double quotation marks.
-# 'hello' is the same as "hello".
-#
-# Strings can be output to screen using the print function. For example: print("Hello")
-#
-# Like many other popular programming languages, strings in Python are arrays of bytes representing unicode characters.
-# However, Python does not have a character data type, a single character is simply a string with a length of 1. Square brackets can be used to access elements of the string.
+a = """Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."""
+print(a) #try it
 
-# Get the character at position 1 (remember that the first character has the position 0):
+# access elements of the string:
+
 a = "Hello, World!"
-print(a[1])
+print(a[1]) #output: e
 
-# Substring. Get the characters from position 2 to position 5 (not included):
+#Slicing:
+#Get the characters from position 2 (not included) to position 5:
 b = "Hello, World!"
-print(b[2:5])
+print(b[2:5]) #output: llo
 
-# The strip() method removes any whitespace from the beginning or the end:
-a = " Hello, World! "
-print( a.strip() ) # returns "Hello, World!"
-
-# The len() method returns the length of a string:
-a = "Hello, World!"
-print( len(a) )
-
-# The lower() method returns the string in lower case:
-a = "Hello, World!"
-print( a.lower() )
-
-# The upper() method returns the string in upper case:
-a = "Hello, World!"
-print( a.upper() )
-
-# replace() method replaces a string with another string:
-a = "Hello, World!"
-print( a.replace("H", "J") )
-
-# The split() method splits the string into substrings if it finds instances of the separator:
-a = "Hello, World!"
-print( a.split(",") ) # returns ['Hello', ' World!']
-
-# Command-line String Input
-#
-# Python allows for command line input.
-# That means we are able to ask the user for input.
-# The following example asks for the user's name, then, by using the input() method, the program prints the name to the screen:
-#print('Enter your name:')
-#x = input()
-x = raw_input("Enter your name: ")
-print("Hello, " + x)
-#------------------
-#Negative Indexing
-#Use negative indexes to start the slice from the end of the string:
-#Example
+# Negative Indexing
 #Get the characters from position 5 to position 1 (not included), starting the count from the end of the string:
+
 b = "Hello, World!"
-print(b[-5:-2])
-#Check String
+print(b[-5:-2]) #output: orl
+
+# String Length
+#To get the length of a string
+
+a = "Hello, World!"
+print(len(a)) #output: 13
+
+# String Methods:
+  #strip()
+    a = " Hello, World! "
+    print(a.strip()) # returns "Hello, World!" 
+  #lower()
+    a = "Hello, World!"
+    print(a.lower()) # returns "hello, world!" 
+  #upper() : same as above but makes all upper-case
+  #replace()
+    a = "Hello, World!"
+    print(a.replace("H", "J"))
+  #split():  splits a string into a list.
+    a = "Hello, World!"
+    print(a.split(",")) # returns ['Hello', ' World!'] 
+    print(a.split())    # returns ['Hello,', 'World!']
+  #more methods here: https://www.w3schools.com/python/python_ref_string.asp
+# Check String
+
 txt = "The rain in Spain stays mainly in the plain"
 x = "ain" not in txt
-print(x)  
-#String Concatenation
+print(x) #output: False
+
+# String Concatenation
+
 a = "Hello"
 b = "World"
-c = a + b
-print(c)
-#TODO: continue this
+c = a + " " + b
+print(c) #output: Hello World
+
+# String Format
+#Use the format() method to insert numbers into strings:
+
+#EX1
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = "I want {} pieces of item {} for {} dollars."
+print(myorder.format(quantity, itemno, price))
+
+#EX2
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = "I want to pay {2} dollars for {0} pieces of item {1}."
+print(myorder.format(itemno , quantity, price)) #output: I want to pay 49.95 dollars for 567 pieces of item 3.
+
+# Escape characters
+print("We are the so-called \"Vikings\" from the north.") #output: We are the so-called "Vikings" from the north.
+"""
+\" 	Double Quote 	
+\' 	Single Quote 	
+\\ 	Backslash 	
+\n 	New Line 	
+\r 	Carriage Return 	
+\t 	Tab 	
+\b 	Backspace 	
+\f 	Form Feed 	
+\ooo 	Octal value 	
+\xhh 	Hex value
+"""
+
+#convert from int/float/comlex to string:
+a = str(x)
+
+#more methods:https://www.w3schools.com/python/python_ref_string.asp
