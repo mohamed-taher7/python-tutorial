@@ -34,10 +34,12 @@ for x in thisdict.values():
 # Loop through both keys and values, by using the items() function:
 for x, y in thisdict.items():
     print(x, y)
+    
+#Check if "model" is present in the dictionary:
+if "model" in thisdict:
+  print("Yes, 'model' is one of the keys in the thisdict dictionary") 
 
-# Dictionary Length
-#
-# To determine how many items (key-value pairs) a dictionary have, use the len method.
+#length
 print( len(thisdict) )
 
 # Adding Items
@@ -69,20 +71,47 @@ del thisdict
 # The clear() keyword empties the dictionary:
 thisdict.clear()
 
+#Make a copy of a dictionary with the copy() method:
+mydict = thisdict.copy()
 
-# Dictionary Methods
-#
-# Python has a set of built-in methods that you can use on dictionaries.
-#
-# Method                Description
-# clear()               Removes all the elements from the dictionary
-# copy()                Returns a copy of the dictionary
-# fromkeys()            Returns a dictionary with the specified keys and values
-# get()                 Returns the value of the specified key
-# items()               Returns a list containing the a tuple for each key value pair
-# keys()                Returns a list containing the dictionary's keys
-# pop()                 Removes the element with the specified key
-# popitem()             Removes the last inserted key-value pair
-# setdefault()          Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
-# update()              Updates the dictionary with the specified key-value pairs
-# values()              Returns a list of all the values in the dictionary
+#Nested Dictionaries
+#Dictionaries in one dic.
+
+myfamily = {
+  "child1" : {
+    "name" : "Emil",
+    "year" : 2004
+  },
+  "child2" : {
+    "name" : "Tobias",
+    "year" : 2007
+  },
+  "child3" : {
+    "name" : "Linus",
+    "year" : 2011
+  }
+} 
+
+#OR
+
+child1 = {
+  "name" : "Emil",
+  "year" : 2004
+}
+child2 = {
+  "name" : "Tobias",
+  "year" : 2007
+}
+child3 = {
+  "name" : "Linus",
+  "year" : 2011
+}
+
+myfamily = {
+  "child1" : child1,
+  "child2" : child2,
+  "child3" : child3
+} 
+
+
+#More methods here:https://www.w3schools.com/python/python_ref_dictionary.asp
