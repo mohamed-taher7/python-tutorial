@@ -1,7 +1,7 @@
-#!/usr/bin/env python
+#__________________________________________functions__________________________________________#
+#all python methods is built-in functions
 
-# Python Functions
-
+#assign
 def my_function():
     print("Hello from a function")
 
