@@ -5,7 +5,6 @@ fruits = ["apple", "banana", "cherry"]
 for x in fruits:
     print(x)
 
-# The for loop does not require an indexing variable to set beforehand.
 
 #Loop Through a String
 for x in "banana":
@@ -71,7 +70,12 @@ fruits = ["apple", "banana", "cherry"]
 
 for x in adj:
     for y in fruits:
-        print(x, y)
+        print(x, y) #tryit: https://www.w3schools.com/python/trypython.asp?filename=demo_for_nested
+#you can make for loops empty by pass statement:
+
+for x in [0, 1, 2]:
+  pass
+
 
 # Recursion
 def tri_recursion(k):
