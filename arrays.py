@@ -1,6 +1,7 @@
-#!/usr/bin/env python
 
-# Python Arrays
+#___________________________________________________Arrays___________________________________________________#
+
+# to work with arrays in Python you will have to import a library, like the NumPy library.(except python lists)
 
 # Arrays are used to store multiple values in one single variable:
 
