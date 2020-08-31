@@ -1,12 +1,8 @@
-#!/usr/bin/env python
-
-# Python Lambda
-#
+#___________________________lambda___________________________
 # A lambda function is a small anonymous function.
-# A lambda function can take any number of argument, but can only have one expression.
 
 # Syntax
-# lambda arguments : expression
+lambda arguments : expression
 
 # A lambda function that adds 10 to the number passed in as an argument, and print the result:
 x = lambda a : a + 10
