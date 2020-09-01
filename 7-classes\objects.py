@@ -1,9 +1,10 @@
 """
-https://www.youtube.com/watch?v=8yjkWGRlUmY
+SMALL INTRO: https://www.youtube.com/watch?v=8yjkWGRlUmY
 #___________________________________________Classes and Objects___________________________________________#
 
-"""
  Python is an object oriented programming language.
+ SEE THIS: https://www.codecademy.com/articles/cpp-object-oriented-programming
+ 
  Almost everything in Python is an object, with its properties and methods.
  A Class is like an object constructor, or a "blueprint" for creating objects.
 """
@@ -24,9 +25,9 @@ All classes have a function called __init__(), which is always executed when the
 Use the __init__() function to assign values to object properties, or other operations that are necessary to do when the object is being created:
 """
 class Person:
-  def __init__(self, name, age):
-    self.name = name
-    self.age = age
+  def __init__(LOL, name, age): #you can name LOL whatever you want but "self" is default
+    LOL.name = name
+    LOL.age = age
 p1 = Person("John", 36)
 print(p1.name)
 print(p1.age) 
@@ -34,12 +35,12 @@ print(p1.age)
 #Insert a function that prints a greeting, and execute it on the p1 object:
 
 class Person:
-  def __init__(self, name, age):
-    self.name = name
-    self.age = age
+  def __init__(lol, name, age):
+    lol.name = name
+    lol.age = age
 
   def myfunc(self):
-    print("Hello my name is " + self.name)
+    print("Hello my name is " + self.name) #this "self" is independent from other
 
 p1 = Person("John", 36)
 p1.myfunc() 
