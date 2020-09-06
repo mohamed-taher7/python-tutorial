@@ -16,3 +16,29 @@ f = open("demofile.txt")
 
 #The code above is the same as:
 f = open("demofile.txt", "rt")
+
+# read() method for reading the content of the file:
+
+f = open("demofile.txt", "r")
+print(f.read()) 
+
+#If the file is located in a different location
+f = open("D:\\myfiles\welcome.txt", "r")
+
+#Return the 5 first characters of the file:
+
+print(f.read(5))   
+
+#You can return one line by using the readline() method:
+print(f.readline())
+
+# read the two first lines:
+print(f.readline())
+print(f.readline()) 
+
+#By looping:
+for x in f:
+  print(x) 
+  
+#It is a good practice to always close the file
+f.close() 
